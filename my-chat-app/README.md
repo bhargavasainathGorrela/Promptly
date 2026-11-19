@@ -2,6 +2,14 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Gemini chat API
+
+The Vercel serverless endpoint at `api/chat.ts` accepts a `POST` to `/api/chat`
+with a JSON body containing a non-empty `messages` array. Each message has a
+`role` (`user`, `assistant`, `model`, or `system`) and string `content`.
+Responses stream as server-sent events with JSON data in the form
+`{"content":"..."}`. Configure `GEMINI_API_KEY` in the deployment environment.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
